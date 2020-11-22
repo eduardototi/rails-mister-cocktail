@@ -1,0 +1,15 @@
+<div class="container-form">
+  <%= simple_form_for(@cocktail) do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+    <div class="cocktail-new text-center">Create your own Cocktail:</div>
+    <div class="form-inputs">
+      <%= f.input :name %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit %>
+      <%= link_to 'Cocktails List', cocktails_path, class: 'btn' %>
+    </div>
+  <% end %>
+</div>

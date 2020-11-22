@@ -1,4 +1,27 @@
 // Import your components CSS files here.
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap');
 @import "alert";
 @import "avatar";
 @import "navbar";
+@import "banner";
+@import "button";
+@import "card";
+@import "show";
+@import "form";
+
+@media(max-width: 992px) {
+  .todo .card-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media(max-width: 768px) {
+  .todo .card-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 100px) and (max-width: 767px) {
+  .todo .card-container {
+    grid-template-columns: 1fr;
+  }
+}

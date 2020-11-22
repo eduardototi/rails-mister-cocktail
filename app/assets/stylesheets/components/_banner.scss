@@ -1,0 +1,27 @@
+.header {
+  background-image: url('drinks.jpg');
+  border-radius: 10px;
+  background-size: cover;
+  text-align: center;
+}
+
+.title-home {
+  color: white;
+  padding: 20px;
+}
+
+.btn-banner {
+  background-color: white;
+  padding: 10px;
+  border-radius: 30px;
+  color: black;
+  box-shadow: 1px 1px 3px white;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.btn-banner:hover {
+  text-decoration: none;
+  color: white;
+  background-color: blue;
+  transition: .6s;
+}

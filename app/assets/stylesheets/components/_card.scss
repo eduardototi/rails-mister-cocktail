@@ -1,60 +1,71 @@
-body {
-  background-color:  #eee;
+.slick-prev, .slick-next {
+  background-color: black;
+  opacity: 1;
 }
+
+.container {
+  width:500px;
+  margin-top: 30px;
+}
+
+.container-show {
+  margin-top: 30px;
+  margin-left: 280px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  display: flex;
+  height: 300px;
+  width: 700px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, .8);
+}
+
 .title {
-
-    margin-bottom: 50px;
-    text-transform: uppercase;
+  margin-left: 40px;
+  background-color: black;
+  color: white;
+  margin: 2px;
+  border-radius: 10px;
+  // text-align: center;
+  font-size: 70px;
+  font-stretch: expanded;
 }
 
-.card-block {
-    font-size: 1em;
-    position: relative;
-    margin: 0;
-    padding: 1em;
-    border: none;
-    border-top: 1px solid rgba(34, 36, 38, .1);
-    box-shadow: none;
+h3 {
+  transform: rotate(270deg);
+  margin-top: 80px;
+  padding: 0;
+  text-shadow: 1px 3px 3px rgba(255, 255, 255, .8);
 
 }
-.card {
-    font-size: 1em;
-    overflow: hidden;
-    padding: 5;
-    border: none;
-    border-radius: .28571429rem;
-    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
-    margin-top:20px;
+
+.cocktail-name {
+  font-size: 25px;
+  margin-left: 40px;
+  font-family: 'Anton', sans-serif;
 }
 
-.carousel-indicators li {
-    border-radius: 12px;
-    width: 12px;
-    height: 12px;
-    background-color: #404040;
-}
-.carousel-indicators li {
-    border-radius: 12px;
-    width: 12px;
-    height: 12px;
-    background-color: #404040;
-}
-.carousel-indicators .active {
-    background-color: white;
-    max-width: 12px;
-    margin: 0 3px;
-    height: 12px;
-}
-.carousel-control-prev-icon {
- background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+.cocktail-dose {
+  font-family: 'Poppins', sans-serif;
+  margin-top: 10px;
+  margin-left: 50px;
 }
 
-.carousel-control-next-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
-}
- lex-direction: column;
+.cocktail-photo {
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, .8);
+  height: 255px;
+  width: 200px;
+  margin-top: -80px;
+  margin-left: 370px;
+  border-radius: 10px;
+  color: white;
+  background-color: gray;
 }
 
 .btn {
-  margin-top: auto;
+  padding: 8px;
+}
+
+.menu-items {
+  margin-top: 0px;
+  margin-left: 20px;
 }

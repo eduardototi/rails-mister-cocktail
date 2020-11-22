@@ -1,14 +1,15 @@
-<div class="container mt-4 col-6 shadow p-3 mb-5 bg-white rounded">
-  <h3 class="text-center">Cocktails List:</h3>
   <div class="container">
-     <% @cocktails.each do |cocktail| %>
-       <div class="shadow p-3 mb-5 bg-white rounded">
-          <p class="text-center"><%= cocktail.name %></p>
-          <p class="text-center"><%= link_to 'Delete', cocktail, method: :delete, data: {confirm: 'Are you sure'}, class: 'btn' %>
-          <%= link_to 'Edit', edit_cocktail_path(cocktail), class: 'btn' %>
-          <%= link_to 'New', new_cocktail_path, class: 'btn' %>
-          <%= link_to 'Show', cocktail, class: 'btn' %></p>
-        </div>
-      <% end  %>
+      <h4 class="card-title text-center">Cocktails List </h4>
+      <div class="your-class cocktails">
+        <% @cocktails.each do |cocktail| %>
+          <div class="cocktail">
+            <%= cocktail.name %>
+            <div class="button">
+              <p class="text-center"><%= link_to 'Delete', cocktail, method: :delete, data: {confirm: 'Are you sure'}, class: 'btn' %>
+              <%= link_to 'Edit', edit_cocktail_path(cocktail), class: 'btn' %>
+              <%= link_to 'Show', cocktail, class: 'btn' %></p>
+            </div>
+          </div>
+        <% end  %>
+      </div>
   </div>
-</div>
