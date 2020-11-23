@@ -1,8 +1,7 @@
 <div class="container-show">
-  <div class="title">
-    <h3>Cocktail:</h3>
+  <div class="title-show">
+    <h2>Cocktail:</h2>
   </div>
-    <div class="card-show">
       <div class="cocktail-name">
         <%= @cocktail.name %>
       </div>
@@ -16,10 +15,9 @@
           </ul>
         </div>
         <% end %>
-        <div class="cocktail-photo">Drink Photo</div>
+        <div class="cocktail-photo"><%= cl_image_tag @cocktail.photo.key, height: 252, width: 260, :radius=>10, crop: :fill %></div>
         <div class="menu-items">
-      <p id="menu-items"><%= link_to 'New Dose', new_cocktail_dose_path(@cocktail), class: 'btn' %>
-      <%= link_to 'Cocktails List', cocktails_path, class: 'btn' %></p>
+          <p id="menu-items"><%= link_to 'New Dose', new_cocktail_dose_path(@cocktail), class: 'btn' %>
+          <%= link_to 'Cocktails List', cocktails_path, class: 'btn' %></p>
     </div>
-   </div>
 </div>

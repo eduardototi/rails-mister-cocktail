@@ -1,7 +1,8 @@
 .header {
-  background-image: url('drinks.jpg');
-  border-radius: 10px;
+  background-image: url('bar.jpg');
+  background-repeat: none;
   background-size: cover;
+  border-radius: 0px;
   text-align: center;
 }
 
@@ -22,6 +23,6 @@
 .btn-banner:hover {
   text-decoration: none;
   color: white;
-  background-color: blue;
+  background-color: gray;
   transition: .6s;
 }
