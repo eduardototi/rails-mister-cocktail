@@ -1,23 +1,22 @@
-<div class="container-show">
-  <div class="title-show">
-    <h2>Cocktail:</h2>
-  </div>
-      <div class="cocktail-name">
-        <%= @cocktail.name %>
+<div class='container'>
+  <div class='container-show center'>
+    <div class="cocktail-card grid-item">
+      <div class='name text-center'>
+        <%= @cocktail.name%>
       </div>
-      <% @cocktail.doses.each do |dose| %>
-        <div class="cocktail-dose">
-          <ul>
-            <li>
-              <%= dose.description %> - <%= dose.ingredient.name %>
-              <%= link_to 'Delete', dose, method: :delete, data: {confirm: 'Are you sure'}, class: 'btn' %>
-            </li>
-          </ul>
-        </div>
-        <% end %>
-        <div class="cocktail-photo"><%= cl_image_tag @cocktail.photo.key, height: 252, width: 260, :radius=>10, crop: :fill %></div>
-        <div class="menu-items">
-          <p id="menu-items"><%= link_to 'New Dose', new_cocktail_dose_path(@cocktail), class: 'btn' %>
-          <%= link_to 'Cocktails List', cocktails_path, class: 'btn' %></p>
+
+      <div class='cocktail-photo'>
+        <%= cl_image_tag @cocktail.photo.key, height: 200, width: 200, crop: :fill %>
+        <ul>
+          <% @cocktail.doses.each do |dose| %>
+            <li><%= dose.description %> - <%= dose.ingredient.name %></li>
+          <% end %>
+        </ul>
+      </div>
+      <div class='card-links text-center'>
+        <%= link_to 'New Dose', new_cocktail_dose_path(@cocktail), class: 'btn' %>
+        <%= link_to 'Cocktails List', cocktails_path, class: 'btn' %>
+      </div>
     </div>
+  </div>
 </div>

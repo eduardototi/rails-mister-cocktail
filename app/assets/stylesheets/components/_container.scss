@@ -1,8 +1,10 @@
-.container-show {
+.container-home {
     background-repeat: no-repeat;
     background-size: cover;
+    display: grid;
     width: 100%;
     gap: 25px;
+    grid-template-columns: 1fr 1fr;
     padding: 20px;
     margin: 20px auto;
 }

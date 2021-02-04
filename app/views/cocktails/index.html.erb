@@ -1,20 +1,26 @@
-  <div class="container-index">
-      <h4 class="title-index">Cocktail:</h4>
-      <div class="your-class cocktails">
-        <% @cocktails.each do |cocktail| %>
-          <div class="cocktail-name-index text-center">
-            <div class="text-center">
-              <%= cocktail.name%>
-            </div>
-              <div class="cocktail-photo-index">
-                <%= cl_image_tag cocktail.photo.key, height: 252, width: 260, :radius=>10, crop: :fill %>
-              </div>
-              <div class="menu-items text-center">
-                <p class="text-center"><%= link_to 'Delete', cocktail, method: :delete, data: {confirm: 'Are you sure'}, class: 'btn' %>
-                <%= link_to 'Edit', edit_cocktail_path(cocktail), class: 'btn' %>
-                <%= link_to 'Show', cocktail, class: 'btn' %></p>
-              </div>
+<div class="container">
+    <div class='container-home display-grid'>
+      <% @cocktails.each do |cocktail| %>
+        <div class="cocktail-card grid-item">
+          <div class='name text-center'>
+            <%= cocktail.name%>
           </div>
-        <% end %>
-      </div>
-  </div>
+
+          <div class='cocktail-photo'>
+            <%= cl_image_tag cocktail.photo.key, height: 200, width: 200, crop: :fill %>
+            <ul>
+              <% cocktail.doses.each do |dose| %>
+                <li><%= dose.description %> - <%= dose.ingredient.name %></li>
+              <% end %>
+            </ul>
+          </div>
+          
+          <div class='card-links text-center'>
+            <%= link_to 'Delete', cocktail, method: :delete, data: {confirm: 'Are you sure'}, class: 'btn' %>
+            <%= link_to 'Edit', edit_cocktail_path(cocktail), class: 'btn' %>
+            <%= link_to 'Show', cocktail, class: 'btn' %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+</div>

@@ -1,15 +1,15 @@
-
-.container-form {
-  display: grid;
-  width: 500px;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, .8);
-  margin-left: 400px;
-  margin-top: 30px;
-  padding: 10px;
-  margin-bottom: 40px;
+.form-actions {
+    background-color: rgba($color: rgb(152, 10, 165), $alpha: 1.0);
+    margin-top: 20px;
 }
 
-.cocktail-new {
-  font-size: 30px;
+.form-inputs {
 }
 
+.form {
+    margin-top: 30px;
+    width: 50%;
+    background-color: rgba($color: rgb(152, 10, 165), $alpha: 0.5);
+    padding: 20px;
+    color: white;
+}

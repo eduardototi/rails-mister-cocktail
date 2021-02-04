@@ -1,13 +1,12 @@
-<div class="container-form">
+<div class="container form">
   <%= simple_form_for(@cocktail) do |f| %>
     <%= f.error_notification %>
     <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-    <div class="cocktail-new text-center">Create your own Cocktail:</div>
     <div class="form-inputs">
-      <%= f.input :name %>
+      <%= f.input :name, label: 'Cocktail name:' %>
     </div>
     <div class="cocktai-photo">
-      <%= f.input :photo, as: :file %>
+      <%= f.input :photo, as: :file, label: 'Photo:' %>
     </div>
     <div class="form-actions text-center">
       <%= f.button :submit %>

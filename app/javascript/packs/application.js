@@ -17,10 +17,8 @@ import 'slick-carousel';
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-const initSlick = () => {
-  $('.your-class').slick()
-}
+
 
 $(document).on('turbolinks:load', function() {
-  initSlick();
+
 })
